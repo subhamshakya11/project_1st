@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <conio.h>
+struct details{
+	char name[20];
+	int rollNo,id;
+	float marks;
+	char phone[10];
+};
+void createDetails();
+void searchStudent();
+void allInfo();
+int main(){
+	//structure
+//	struct details dtl[5];
+//	int i;
+//    for (i = 0; i < 5; ++i) {
+//        dtl[i].rollNo = i + 1;
+//        printf("\nFor roll number%d,\n", dtl[i].rollNo);
+//        printf("Enter first name: ");
+//        scanf("%s", dtl[i].name);
+//        printf("Enter marks: ");
+//        scanf("%f", &dtl[i].marks);
+//        printf("Enter phone:");
+//        scanf("%c",&dtl[i].phone);
+//    }
+	
+    //giving to choose the facilities to the student or techer
+    printf("1.All student info/details\n2.Search student\n3.Create new details\n4.Edit details\n5.Delete students\n");
+    printf("Choose the above option to continue\n");
+    int choose;
+    scanf("%d",&choose);
+ 
+    
+    switch (choose)
+    {
+    case 1:
+        printf("You choose all student info");
+        break;
+     
+    case 2:
+    printf("you choose search student");
+        break;
+    
+    case 3:
+         printf("Create new details\n");
+         createDetails();
+         
+        break;
+    
+    case 4:
+        
+        break;
+    
+    case 5:
+        
+        break;
+    
+    default:
+        break;
+    }    
+
+
+}
+
+void createDetails(){
+	// storing information
+	struct details dtl[5];
+	int i;
+    for (i = 0; i < 5; ++i) {
+//        dtl[i].id = i + 1;
+//        printf("\nFor id%d,\n", dtl[i].id);
+        printf("Enter roll no ");
+        scanf("%d",&dtl[i].rollNo);
+        printf("Enter first name: ");
+        scanf("%s", dtl[i].name);
+        printf("Enter marks: ");
+        scanf("%f", &dtl[i].marks);
+        printf("Enter phone:");
+        scanf("%s", dtl[i].phone);
+    }
+
+}
